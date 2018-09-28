@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//随机数
+ 			//Math.random()          //返回0-1之间的随机数
+//			var num = Math.random();
+//			console.log(num);
+//			
+//			//获取10-20的整数
+//			var num1 = Math.round(Math.random()*10)+10;
+//			console.log(num1);
+			
+			
+			
+			
+			
+			
+			
+			window.onload = function(){
+				var span1 = document.getElementById("span1");
+				var span2 = document.getElementById("span2");
+				var span3 = document.getElementById("span3");
+				var span4 = document.getElementById("span4");
+				var btn = document.getElementById("btn");
+				/*65-90,97-122*/
+				btn.onclick=function(){
+					var num1 =Math.round(Math.random()*10);
+					if(num1==10){
+						num1=0;	
+					}
+					
+					var num2 =Math.round(Math.random()*25)+65;
+					var num2s = String.fromCharCode(num2);
+					 
+					
+					var num3 =Math.round(Math.random()*10);
+					if(num3==10){
+						num3=0;	
+					}
+					
+					var num4 =Math.round(Math.random()*25)+65;
+					
+					var num4s = String.fromCharCode(num4);
+					
+					span1.innerHTML=num1;
+					span2.innerHTML=num2s;
+					span3.innerHTML=num3;
+					span4.innerHTML=num4s;
+				}
+				
+			}
+			
+		/*	<span id="span1"></span>
+		<span id="span2"></span>
+		<span id="span3"></span>
+		<span id="span4"></span>*/
+		</script>
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			div{
+				float: left;
+				width: 20px;
+				height: 20px;
+				margin-left: 2px;
+				background: bisque;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<div id="span1"></div>
+		<div id="span2"></div>
+		<div id="span3"></div>
+		<div id="span4"></div>
+		<input type="button" name="" id="btn" value="生成验证码" />
+	</body>
+</html>
